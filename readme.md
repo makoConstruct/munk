@@ -1,6 +1,6 @@
 `munk` is a lisplike that was made as a query language for [neschat](https://github.com/dream-shrine/neschat/).
 
-`music_query_and_hello.munk` (written in termpose):
+`music_query_and_hello.munk` (written in [termpose](https://github.com/makoConstruct/termpose)):
 ```
 param input
 use (neschat publish latest_version articles_by_endorsement)
@@ -34,7 +34,7 @@ Another way of supporting one-request page loads is by allowing the client to ju
 
 For a query language, I considered using wasm, or racket, or clojure. Providing really minimal APIs seemed hard. As to the others, I wanted to use a language that's runtime brutally simple enough to ensure that there were absolutely zero security risks for running scripts that had been sent to the server from rando clients. So I decided to just write one myself. I then realized that the thing I'd written was kinda neat and got excited about it.
 
-## Why didn't you finish this?
+## Why didn't you finish this? (It doesn't even compile!)
 
 It occurred to me that memory management was going to be a little bit more complicated than I thought, and it ended up taking too long. Refcounting wouldn't have worked, because it would eventually end up enabling a malicious client to leak memory on the server (I couldn't easily prove to myself that this wasn't already possible). GC would have taken a while to integrate. Arena bump allocation would have worked fine, but it's so crude, it would have drained away a lot of the enthusiasm I had for making `munk`.
 

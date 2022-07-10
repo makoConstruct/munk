@@ -190,7 +190,7 @@ fn use_recurse(ext_mods:&HashMap<String, Rob>, namespace:&mut HashMap<String, Ro
                 return Err(error_at(uw, "syntax error: empty branch in use"));
             }
             if v.len() == 1 {
-                return Err(error _at(uw, "syntax error: this use branch doesn't import anything. Try removing the parens"));
+                return Err(error_at(uw, "syntax error: this use branch doesn't import anything. Try removing the parens"));
             }
             let mod_name = v[0].get_leaf().ok_or_else(|| error_at(v[0], "this should be the name of the module being imported from".into()))?;
             let moduleo = ext_mods.get(mod_name).ok_or_else(|| error_at(v[0], "no such module"))?;
