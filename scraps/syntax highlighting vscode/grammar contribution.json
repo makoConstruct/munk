@@ -1,0 +1,17 @@
+{
+  "contributes": {
+    "languages": [
+      {
+        "id": "munk",
+        "extensions": [".munk"]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "munk",
+        "scopeName": "source.munk",
+        "path": "./syntaxes/abc.tmGrammar.json"
+      }
+    ]
+  }
+}

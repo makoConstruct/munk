@@ -1,0 +1,30 @@
+{
+  "scopeName": "source.munk",
+  "patterns": [{ "include": "#expression" }],
+  "repository": {
+    "expression": {
+      "patterns": [
+          { "include": "#builtin" },
+          { "include": "#number" },
+          { "include": "#paren-expression" },
+          { "include": "#literal" }
+        ]
+    },
+    "builtin": {
+      "match": "use|do|if|else|return",
+      "name": "keyword"
+    },
+    "paren-expression": {
+      "begin": "\\(",
+      "end": "\\)",
+      "beginCaptures": {
+        "0": { "name": "punctuation.paren.open" }
+      },
+      "endCaptures": {
+        "0": { "name": "punctuation.paren.close" }
+      },
+      "name": "expression.group",
+      "patterns": [{ "include": "#expression" }]
+    }
+  }
+}

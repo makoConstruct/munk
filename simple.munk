@@ -1,0 +1,22 @@
+use
+    std print add
+
+print '"hey"
+print '"hey"
+
+2
+
+#( endorsed (from (properties profile)) (hops 2) (limit 60)
+
+#( reaction (expiry (add now (hours 40))) (callback (fn a b d do
+    '(
+        message "yes that's wild"
+        identifier ('' (a b))
+
+#"
+    General thoughts about SYNTAX HIGHLIGHTING
+    dim parens slightly, color if, use, do, else. Color ' bright green.
+    if you can select indented content, dim comments, and green literals
+    expressions nested in use should dim non-leaf head items, to make it clear that they're part of the path.
+    Or maybe head items should just generally be brightened.
+    And yes, number types should be colore differently. They are distinguished from names, in munk.
